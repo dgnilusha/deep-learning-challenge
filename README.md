@@ -14,10 +14,17 @@ Features: The features used for the model include "APPLICATION_TYPE," "AFFILIATI
 
 Compiling, Training, and Evaluating the Model:
 
-Neurons, Layers, and Activation Functions: We selected a neural network model with two hidden layers. The first hidden layer has 8 neurons with the ReLU activation function, and the second hidden layer has 5 neurons with the ReLU activation function. The output layer has 1 neuron with the sigmoid activation function to produce binary classification results. We chose this architecture to balance complexity and model performance.
-Achieving the Target Model Performance: Our initial model achieved an accuracy of approximately 72.56%, which fell short of the target of over 75% accuracy.
-s
+Neurons, Layers, and Activation Functions: We selected a neural network model with two hidden layers. The first hidden layer has 80 neurons with the ReLU activation function, and the second hidden layer has 30 neurons with the ReLU activation function. The output layer has 1 neuron with the sigmoid activation function to produce binary classification results. We chose this architecture to balance complexity and model performance.
+
+Achieving the Target Model Performance: The initial model achieved an accuracy of approximately 72.56%, which did not meet the predefined target accuracy of over 75%. To improve model performance, we followed these steps:
+
 Steps for Increasing Model Performance:
 
-Summary:
-In summary, our deep learning model's performance, as it stands, did not meet the target accuracy of 75%
+1. Hyperparameter Tuning: We employed the Keras Tuner library to optimize hyperparameters, including the choice of activation function, the number of hidden layers, and the number of neurons in each hidden layer
+2. Hyperband Search: We used the Hyperband search strategy for hyperparameter tuning, aiming to find the best model configuration within a limited number of iterations.
+
+Results summary:
+
+After hyperparameter tuning, the best model achieved an accuracy of 72.70%. While this is an improvement over the initial model, it still falls short of the target accuracy of 75%.
+
+Further optimization or consideration of different model architectures and techniques may be required to meet the desired performance threshold.
